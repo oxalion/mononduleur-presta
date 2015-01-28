@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<partners>
+<partner>
+	<name><![CDATA[Mondial Relay]]></name>
+	<module>mondialrelay</module>
+	<logo><![CDATA[https://api.prestashop.com/partner/premium/images/mondialrelay.png]]></logo>
+	<labels>
+		<label iso="en"><![CDATA[Offer over 4900 drop-off and pick-up points at unbeatable prices]]></label>
+		<label iso="fr"><![CDATA[Offrez plus de 4900 points relais à des prix imbattables]]></label>
+		<label iso="es"><![CDATA[Ofrece más de 4.900 puntos de entrega y recogida a precios imbatibles]]></label>
+		<label iso="nl"><![CDATA[Biedt meer dan 4.900 afhaal- en leveringspunten aan tegen onovertrefbare prijzen]]></label>
+	</labels>
+	<optionals>
+	</optionals>
+	<descriptions>
+	</descriptions>
+</partner>
+<partner>
+	<name><![CDATA[fianetsceau]]></name>
+	<module>fianetsceau</module>
+	<checkconfiguration>
+		<key>FIANETSCEAU_CONFIGURATION_OK</key>
+	</checkconfiguration>
+	<logo><![CDATA[https://api.prestashop.com/partner/premium/images/fianetsceau.png]]></logo>
+	<labels>
+		<label iso="en"><![CDATA[Gain your customers' trust and increase your transformation rate]]></label>
+		<label iso="fr"><![CDATA[Rassurez vos clients et augmentez votre taux de transformation]]></label>
+	</labels>
+	<optionals>
+	</optionals>
+	<descriptions>
+	</descriptions>
+</partner>
+</partners>
