@@ -44,17 +44,17 @@
 		<h3>{l s='Your Account'}</h3>
 		<ul>
 		{if $logged}
-			<li><a href="{$link->getPageLink('my-account', true)}" title="{l s='Manage your customer account'}" rel="nofollow">{l s='Your Account'}</a></li>
-			<li><a href="{$link->getPageLink('identity', true)}" title="{l s='Manage your personal information'}" rel="nofollow">{l s='Personal information'}</a></li>
-			<li><a href="{$link->getPageLink('addresses', true)}" title="{l s='View a list of my addresses'}" rel="nofollow">{l s='Addresses'}</a></li>
-			{if $voucherAllowed}<li><a href="{$link->getPageLink('discount', true)}" title="{l s='View a list of my discounts'}" rel="nofollow">{l s='Discounts'}</a></li>{/if}
-			<li><a href="{$link->getPageLink('history', true)}" title="{l s='View a list of my orders'}" rel="nofollow">{l s='Order history'}</a></li>
+			<li><a href="{$link->getPageLink('my-account', true)}" title="{l s='Manage your customer account'}" >{l s='Your Account'}</a></li>
+			<li><a href="{$link->getPageLink('identity', true)}" title="{l s='Manage your personal information'}" >{l s='Personal information'}</a></li>
+			<li><a href="{$link->getPageLink('addresses', true)}" title="{l s='View a list of my addresses'}" >{l s='Addresses'}</a></li>
+			{if $voucherAllowed}<li><a href="{$link->getPageLink('discount', true)}" title="{l s='View a list of my discounts'}" >{l s='Discounts'}</a></li>{/if}
+			<li><a href="{$link->getPageLink('history', true)}" title="{l s='View a list of my orders'}" >{l s='Order history'}</a></li>
 		{else}
-			<li><a href="{$link->getPageLink('authentication', true)}" title="{l s='Authentication'}" rel="nofollow">{l s='Authentication'}</a></li>
+			<li><a href="{$link->getPageLink('authentication', true)}" title="{l s='Authentication'}" >{l s='Authentication'}</a></li>
 			<li><a href="{$link->getPageLink('authentication', true)}" title="{l s='Create new account'}"rel="nofollow">{l s='Create new account'}</a></li>
 		{/if}
 		{if $logged}
-			<li><a href="{$link->getPageLink('index')}?mylogout" title="{l s='Log out'}" rel="nofollow">{l s='Log out'}</a></li>
+			<li><a href="{$link->getPageLink('index')}?mylogout" title="{l s='Log out'}" >{l s='Log out'}</a></li>
 		{/if}
 		</ul>
 	</div>
