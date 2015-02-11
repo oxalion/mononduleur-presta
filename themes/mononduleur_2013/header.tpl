@@ -16,6 +16,15 @@
     <meta http-equiv="content-language" content="{$meta_language}" />
     <meta name="generator" content="PrestaShop" />
     <meta name="robots" content="{if isset($nobots)}no{/if}index,{if isset($nofollow) && $nofollow}no{/if}follow" />
+    <!-- canonical -->
+    {if $page_name == 'index' or $page_name == 'search'}
+      <link rel="canonical" href="{$base_dir}" />
+    {elseif $page_name == 'category' or $page_name == 'best-sales' or $page_name == 'cart' or $page_name == 'discount' or $page_name == 'manufacturer' or $page_name == 'new-products' or $page_name == 'prices-drop'}
+      <link rel="canonical" href="{$base_dir}{$request_uri|substr:1|regex_replace:'/\/(.*)/':''|regex_replace:'/\?(.*)/':''}" />
+    {else}
+      <link rel="canonical" href="{$base_dir}{$request_uri|substr:1}" />
+    {/if}
+    <!-- /canonical -->
     <link rel="icon" type="image/vnd.microsoft.icon" href="{$favicon_url}?{$img_update_time}" />
     <link rel="shortcut icon" type="image/x-icon" href="{$favicon_url}?{$img_update_time}" />
     <script type="text/javascript">

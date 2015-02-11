@@ -132,4 +132,3 @@ ErrorDocument 404 /index.php?controller=404
 #redirection permanente
 #Redirect 301 /index.html http://www.mononduleur.fr
 #Redirect 301 /index.php http://www.mononduleur.fr
-
