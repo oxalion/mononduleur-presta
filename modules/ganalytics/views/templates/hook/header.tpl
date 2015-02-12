@@ -38,7 +38,7 @@
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     {/literal}
 
-    ga('create', '{$ganalytics_id|escape:'htmlall':'UTF-8'}'{if isset($pageTrack)}, '{$pageTrack|escape:'htmlall':'UTF-8'}'{/if});
+    ga('create', '{$ganalytics_id|escape:'htmlall':'UTF-8'}'{if isset($pageTrack)}, '{$pageTrack|escape:'htmlall':'UTF-8'}'{/if}, 'auto');
 
     {if $isOrder eq true}
     ga('require', 'ecommerce', 'ecommerce.js');
