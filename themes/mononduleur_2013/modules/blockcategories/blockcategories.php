@@ -43,7 +43,6 @@ class BlockCategoriesTheme extends BlockCategories
 				WHERE (c.`active` = 1 OR c.`id_category` = 1)
 				'.((int)($maxdepth) != 0 ? ' AND `level_depth` <= '.(int)($maxdepth) : '').'
 				AND cg.`id_group` IN ('.pSQL($groups).')
-				AND c.`id_category` NOT IN (89, 90, 91, 92, 93, 117)
 				ORDER BY `level_depth` ASC, '.(Configuration::get('BLOCK_CATEG_SORT') ? 'cl.`name`' : 'category_shop.`position`').' '.(Configuration::get('BLOCK_CATEG_SORT_WAY') ? 'DESC' : 'ASC')))
 				return;
 			$resultParents = array();
