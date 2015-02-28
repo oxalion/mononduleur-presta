@@ -4,12 +4,10 @@
 	<div class="block_content">
 		<ul class="tree {if $isDhtml}dhtml{/if}">
 		{foreach from=$blockCategTree.children item=child name=blockCategTree}
-			{if $child.id != 89 && $child.id != 90 && $child.id != 91 && $child.id != 92 && $child.id != 93}
-				{if $smarty.foreach.blockCategTree.last}
-					{include file="$branche_tpl_path" node=$child last='true'}
-				{else}
-					{include file="$branche_tpl_path" node=$child}
-				{/if}
+			{if $smarty.foreach.blockCategTree.last}
+				{include file="$branche_tpl_path" node=$child last='true'}
+			{else}
+				{include file="$branche_tpl_path" node=$child}
 			{/if}
 		{/foreach}
 		</ul>
