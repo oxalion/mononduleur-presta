@@ -53,7 +53,7 @@
 			{if $display_stores_footer}<li class="item"><a href="{$link->getPageLink('stores')}" title="{l s='Our stores' mod='blockcms'}">{l s='Our stores' mod='blockcms'}</a></li>{/if}
 			<li class="item"><a href="{$link->getPageLink($contact_url, true)}" title="{l s='Contact us' mod='blockcms'}">{l s='Contact us' mod='blockcms'}</a></li>
 			{foreach from=$cmslinks item=cmslink}
-				{if $cmslink.meta_title != ''}
+				{if $cmslink.meta_title != '' and $cmslink.meta_title != 'Accueil'}
 					<li class="item"><a href="{$cmslink.link|addslashes}" title="{$cmslink.meta_title|escape:'htmlall':'UTF-8'}">{$cmslink.meta_title|escape:'htmlall':'UTF-8'}</a></li>
 				{/if}
 			{/foreach}
