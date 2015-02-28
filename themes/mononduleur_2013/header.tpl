@@ -15,7 +15,46 @@
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
     <meta http-equiv="content-language" content="{$meta_language}" />
     <meta name="generator" content="PrestaShop" />
-    <meta name="robots" content="{if isset($nobots)}no{/if}index,{if isset($nofollow) && $nofollow}no{/if}follow" />
+   {assign var=myURI value=$smarty.server.REQUEST_URI}
+    {if $myURI|strstr:"/recherche" ||
+      $myURI|strstr:"mentions-legales" ||
+      $myURI|strstr:"products-comparison.php" ||
+      $myURI|strstr:"orderby" ||
+      $myURI|strstr:"orderway" ||
+      $myURI|strstr:"fabricants" ||
+      $myURI|strstr:"fournisseurs" ||
+      $myURI|strstr:"magasins" ||
+      $myURI|strstr:"commande" ||
+      $myURI|strstr:"promotions" ||
+      $myURI|strstr:"id_cms" ||
+      $myURI|strstr:"id_manufacturer" ||
+      $myURI|strstr:"id_category" ||
+      $myURI|strstr:"back=" ||      
+      $myURI|strstr:"back%3D" ||      
+      $myURI|strstr:"sendtoafriend-form.php" ||
+      $myURI|strstr:"attachment.php" ||
+      $myURI|strstr:"/content/category" ||
+      $myURI|strstr:"n=" ||
+      $myURI|strstr:"n%3D" ||
+      $myURI|strstr:"p=" ||
+      $myURI|strstr:"p%3D" ||
+      $myURI|strstr:"qty" ||
+      $myURI|strstr:"noredirect=" ||
+      $myURI|strstr:"add=" ||
+      $myURI|strstr:"add%3D" ||
+      $myURI|strstr:"selected_filters" ||
+      $myURI|strstr:"bPost=" || 
+      $myURI|strstr:"search_query=" ||
+      $myURI|strstr:"paiement-securise" ||
+      $myURI|strstr:"conditions-generales-de-ventes" ||
+      $myURI|strstr:"plan-du-site" ||
+      $myURI|strstr:"contactez-nous" ||
+      $myURI|strstr:"nouveaux-produits" ||
+      $myURI|strstr:"token"}
+      <meta name="robots" content="noindex,follow" />
+    {else}
+      <meta name="robots" content="{if isset($nobots)}no{/if}index,{if isset($nofollow) && $nofollow}no{/if}follow" />
+    {/if}
     <!-- canonical -->
     {if $page_name == 'index' or $page_name == 'search'}
       <link rel="canonical" href="{$base_dir}" />
